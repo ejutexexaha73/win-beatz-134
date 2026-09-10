@@ -1,0 +1,423 @@
+:root {
+    --tar: #101014; --asphalt: #17181d; --coal: #0c0c10; --lime: #d4ff3f; --pink: #ff4fa3;
+    --paper: #f2f3f7; --smoke: rgba(242, 243, 247, 0.68); --seam: rgba(255, 255, 255, 0.09);
+    --glass: rgba(23, 24, 29, 0.72); --glow-lime: 0 0 18px rgba(212, 255, 63, 0.35);
+    --glow-pink: 0 0 18px rgba(255, 79, 163, 0.35);
+    --head: "Unbounded", "Segoe UI", system-ui, sans-serif;
+    --body: "Rubik", "Helvetica Neue", Arial, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    margin: 0; min-height: 100vh;
+    background: radial-gradient(680px 340px at 12% -4%, rgba(255, 79, 163, 0.10), transparent 70%), radial-gradient(760px 420px at 88% 12%, rgba(212, 255, 63, 0.08), transparent 70%), var(--tar);
+    color: var(--paper); font-family: var(--body); font-size: 16px; line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; height: auto; }
+[id] { scroll-margin-top: 24px; }
+
+
+.strut-ticker-e9970fea {
+    overflow: hidden; border-bottom: 1px solid var(--seam); background: var(--coal);
+    padding: 9px 0;
+}
+.strut-ticker-belt-e9970fea {
+    display: flex; width: max-content; animation: strut-crawl 26s linear infinite;
+}
+.strut-ticker-item-e9970fea {
+    flex: 0 0 auto; margin-right: 2.6rem; font-family: var(--head); font-size: 0.62rem;
+    font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--lime);
+    white-space: nowrap;
+}
+.strut-ticker-item-e9970fea::after { content: "\2726"; padding-left: 2.6rem; color: var(--pink); }
+@keyframes strut-crawl {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+.strut-marquee-e9970fea { padding: 44px 20px 8px; text-align: center; }
+.strut-sign-e9970fea {
+    margin: 0; font-family: var(--head); font-size: clamp(1.5rem, 4.6vw, 2.4rem);
+    font-weight: 700; letter-spacing: 0.02em; color: #ffffff;
+    text-shadow: 0 0 12px rgba(212, 255, 63, 0.55), 0 0 42px rgba(212, 255, 63, 0.25);
+}
+.strut-sign-sub-e9970fea {
+    margin: 10px auto 0; max-width: 520px; color: var(--smoke); font-size: 0.98rem;
+}
+
+
+.strut-city-e9970fea { padding: 26px 20px 30px; }
+
+
+.strut-arcade-e9970fea { display: flex; justify-content: center; padding: 14px 0 26px; }
+.strut-phone-e9970fea {
+    width: min(370px, 100%); border: 1px solid rgba(212, 255, 63, 0.30);
+    border-radius: 36px;
+    background: linear-gradient(170deg, rgba(28, 29, 36, 0.85), var(--glass));
+    box-shadow: 0 0 0 5px rgba(8, 8, 11, 0.9), 0 0 46px rgba(212, 255, 63, 0.10), 0 24px 70px rgba(255, 79, 163, 0.08);
+    backdrop-filter: blur(12px);
+}
+.strut-notch-e9970fea {
+    width: 112px; height: 20px; margin: 0 auto; background: var(--coal);
+    border-radius: 0 0 14px 14px;
+}
+.strut-cab-e9970fea { padding: 14px 16px 20px; }
+.strut-bank-e9970fea { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.strut-bank-word-e9970fea {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--smoke);
+}
+.strut-bank-count-e9970fea {
+    font-family: var(--head); font-size: 1.05rem; font-weight: 700; color: var(--lime);
+    font-variant-numeric: tabular-nums;
+}
+.strut-refill-e9970fea {
+    margin-left: auto; padding: 4px 13px; border: 1px solid rgba(255, 79, 163, 0.55);
+    border-radius: 999px; background: transparent; color: var(--pink);
+    font-family: var(--body); font-size: 0.74rem; font-weight: 600; letter-spacing: 0.06em;
+    text-transform: uppercase; cursor: pointer;
+    transition: box-shadow 0.16s ease, color 0.16s ease;
+}
+.strut-refill-e9970fea:hover:enabled { box-shadow: var(--glow-pink); color: #ffffff; }
+.strut-refill-e9970fea:disabled { opacity: 0.4; cursor: default; }
+
+
+.strut-gears-e9970fea {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 7px; margin-bottom: 14px;
+}
+.strut-gear-e9970fea {
+    padding: 8px 4px; border: 1px solid var(--seam); border-radius: 11px;
+    background: rgba(255, 255, 255, 0.03); color: var(--smoke); font-family: var(--head);
+    font-size: 0.6rem; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.15s ease, border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+.strut-gear-e9970fea:hover:enabled { border-color: rgba(212, 255, 63, 0.5); color: #ffffff; }
+.strut-gear-live-e9970fea, .strut-gear-live-e9970fea:hover:enabled {
+    background: var(--lime); border-color: var(--lime); color: var(--tar);
+    box-shadow: var(--glow-lime);
+}
+.strut-gear-e9970fea:disabled { opacity: 0.55; cursor: default; }
+
+
+.strut-meters-e9970fea {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 14px;
+}
+.strut-meter-e9970fea {
+    display: flex; flex-direction: column; gap: 2px; padding: 8px 10px;
+    border: 1px solid var(--seam); border-radius: 12px;
+    background: rgba(255, 255, 255, 0.03);
+}
+.strut-meter-name-e9970fea {
+    font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--smoke);
+}
+.strut-meter-read-e9970fea {
+    font-family: var(--head); font-size: 0.92rem; font-weight: 500; color: #ffffff;
+    font-variant-numeric: tabular-nums;
+}
+
+
+.strut-street-e9970fea {
+    display: flex; flex-direction: column; overflow: hidden; margin-bottom: 12px;
+    border: 1px solid var(--seam); border-radius: 16px; background: var(--asphalt);
+}
+.strut-lane-e9970fea {
+    position: relative; height: 33px; flex: 0 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); overflow: hidden;
+}
+.strut-lane-e9970fea::after {
+    content: ""; position: absolute; left: 10px; right: 64px; top: 50%;
+    border-top: 2px dashed rgba(242, 243, 247, 0.14);
+}
+.strut-lane-mult-e9970fea {
+    position: absolute; right: 9px; top: 50%; transform: translateY(-50%); z-index: 2;
+    padding: 1px 7px; border-radius: 999px; background: rgba(12, 12, 16, 0.8);
+    font-family: var(--head); font-size: 0.56rem; font-weight: 500; color: var(--smoke);
+    font-variant-numeric: tabular-nums;
+}
+.strut-lane-done-e9970fea { background: rgba(212, 255, 63, 0.07); }
+.strut-lane-done-e9970fea .strut-lane-mult-e9970fea { color: var(--lime); }
+.strut-lane-next-e9970fea { animation: strut-pulse 1.15s ease-in-out infinite alternate; }
+.strut-lane-next-e9970fea .strut-lane-mult-e9970fea { color: #ffffff; }
+@keyframes strut-pulse {
+    from { box-shadow: inset 0 0 0 1px rgba(212, 255, 63, 0.15); }
+    to { box-shadow: inset 0 0 10px 1px rgba(212, 255, 63, 0.4); }
+}
+.strut-lane-smash-e9970fea { background: rgba(255, 79, 163, 0.12); }
+.strut-lane-smash-e9970fea::before {
+    content: ""; position: absolute; top: 0; bottom: 0; left: -60%; width: 55%; z-index: 1;
+    background: linear-gradient(90deg, transparent, rgba(255, 250, 214, 0.85), transparent);
+    transform: skewX(-18deg); animation: strut-beam 0.75s ease-in forwards;
+}
+@keyframes strut-beam {
+    to { left: 115%; }
+}
+.strut-car-e9970fea {
+    position: absolute; top: 50%; left: -18%; z-index: 3; transform: translateY(-50%);
+    font-size: 19px; line-height: 1; animation: strut-drive 0.7s ease-in forwards;
+}
+@keyframes strut-drive {
+    to { left: 108%; }
+}
+.strut-kerb-e9970fea {
+    position: relative; height: 42px; flex: 0 0 auto;
+    background: repeating-linear-gradient(45deg, #1d1e25 0 12px, #26202b 12px 24px);
+    border-top: 1px solid rgba(255, 79, 163, 0.25);
+}
+.strut-hen-e9970fea {
+    position: absolute; left: 50%; top: 50%; z-index: 4; transform: translate(-50%, -54%);
+    font-size: 22px; line-height: 1; text-shadow: 0 0 9px rgba(212, 255, 63, 0.65);
+}
+.strut-hen-hopping-e9970fea { animation: strut-hop 0.28s ease-out; }
+@keyframes strut-hop {
+    0% { transform: translate(-50%, 30%) scale(0.85); }
+    60% { transform: translate(-50%, -70%) scale(1.08); }
+    100% { transform: translate(-50%, -54%) scale(1); }
+}
+.strut-hen-safe-e9970fea { text-shadow: 0 0 16px rgba(212, 255, 63, 0.95); }
+
+
+.strut-callout-e9970fea {
+    min-height: 2.6em; margin: 0 0 12px; font-size: 0.88rem; font-weight: 500;
+    text-align: center; color: var(--smoke);
+}
+.strut-callout-e9970fea.strut-good-e9970fea { color: var(--lime); text-shadow: 0 0 14px rgba(212, 255, 63, 0.4); }
+.strut-callout-e9970fea.strut-bad-e9970fea { color: var(--pink); text-shadow: 0 0 14px rgba(255, 79, 163, 0.4); }
+.strut-stake-row-e9970fea { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+.strut-stake-word-e9970fea {
+    font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--smoke);
+}
+.strut-stake-e9970fea {
+    flex: 1; min-width: 0; padding: 10px 12px; border: 1px solid var(--seam);
+    border-radius: 12px; background: var(--coal); color: #ffffff; font-family: var(--body);
+    font-size: 1rem; font-weight: 600; text-align: center; -moz-appearance: textfield;
+    appearance: textfield;
+}
+.strut-stake-e9970fea::-webkit-outer-spin-button, .strut-stake-e9970fea::-webkit-inner-spin-button {
+    -webkit-appearance: none; margin: 0;
+}
+.strut-stake-e9970fea:focus {
+    outline: none; border-color: rgba(212, 255, 63, 0.6);
+    box-shadow: 0 0 0 3px rgba(212, 255, 63, 0.14);
+}
+.strut-stake-e9970fea:disabled { color: var(--smoke); }
+.strut-nudge-e9970fea {
+    width: 44px; padding: 10px 0; border: 1px solid var(--seam); border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04); color: var(--paper); font-family: var(--body);
+    font-size: 0.9rem; font-weight: 600; cursor: pointer;
+    transition: border-color 0.15s ease, color 0.15s ease;
+}
+.strut-nudge-e9970fea:hover:enabled { border-color: rgba(212, 255, 63, 0.55); color: var(--lime); }
+.strut-nudge-e9970fea:disabled { opacity: 0.4; cursor: default; }
+.strut-go-row-e9970fea { display: flex; gap: 10px; }
+.strut-hop-btn-e9970fea, .strut-collect-btn-e9970fea {
+    flex: 1; padding: 13px 10px; border-radius: 14px; font-family: var(--head);
+    font-size: 0.8rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+    cursor: pointer;
+    transition: box-shadow 0.15s ease, transform 0.12s ease, background-color 0.15s ease, color 0.15s ease;
+}
+.strut-hop-btn-e9970fea {
+    border: 1px solid var(--lime); background: var(--lime); color: var(--tar);
+    box-shadow: var(--glow-lime);
+}
+.strut-hop-btn-e9970fea:hover:enabled {
+    transform: translateY(-1px); box-shadow: 0 0 26px rgba(212, 255, 63, 0.5);
+}
+.strut-collect-btn-e9970fea {
+    border: 1px solid var(--pink); background: transparent; color: var(--pink);
+}
+.strut-collect-btn-e9970fea:hover:enabled {
+    box-shadow: var(--glow-pink); color: #ffffff; transform: translateY(-1px);
+}
+.strut-hop-btn-e9970fea:disabled, .strut-collect-btn-e9970fea:disabled {
+    border-color: var(--seam); background: rgba(255, 255, 255, 0.03);
+    color: rgba(242, 243, 247, 0.35); box-shadow: none; cursor: default; transform: none;
+}
+.strut-no-js-e9970fea {
+    margin: 14px 0 0; padding: 12px 14px; border: 1px dashed rgba(255, 79, 163, 0.6);
+    border-radius: 12px; color: var(--pink); font-size: 0.88rem;
+}
+
+
+.strut-rooms-e9970fea { max-width: 860px; margin: 0 auto; padding: 14px 0 8px; }
+.strut-rooms-e9970fea:has(.strut-glow-track-e9970fea:empty) { display: none; }
+.strut-rooms-sign-e9970fea {
+    margin: 0 0 14px; font-family: var(--head); font-size: 1.05rem; font-weight: 500;
+    letter-spacing: 0.04em; color: #ffffff;
+}
+.strut-glow-rail-e9970fea {
+    overflow-x: auto; padding-bottom: 12px;
+    scrollbar-color: rgba(212, 255, 63, 0.4) transparent;
+}
+.strut-glow-rail-e9970fea::-webkit-scrollbar { height: 8px; }
+.strut-glow-rail-e9970fea::-webkit-scrollbar-thumb {
+    background: rgba(212, 255, 63, 0.35); border-radius: 999px;
+}
+.strut-glow-rail-e9970fea::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.04); border-radius: 999px;
+}
+.strut-glow-track-e9970fea { display: flex; gap: 14px; width: max-content; padding: 4px 2px; }
+.strut-token-e9970fea {
+    display: flex; flex-direction: column; align-items: center; gap: 9px; min-width: 186px;
+    padding: 18px 16px; border: 1px solid rgba(212, 255, 63, 0.30); border-radius: 18px;
+    background: var(--glass); box-shadow: 0 0 22px rgba(212, 255, 63, 0.08);
+    transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+.strut-token-e9970fea:nth-child(even) {
+    border-color: rgba(255, 79, 163, 0.35); box-shadow: 0 0 22px rgba(255, 79, 163, 0.08);
+}
+.strut-token-e9970fea:hover {
+    transform: translateY(-3px); box-shadow: 0 0 30px rgba(212, 255, 63, 0.2);
+}
+.strut-token-e9970fea:nth-child(even):hover { box-shadow: 0 0 30px rgba(255, 79, 163, 0.22); }
+.strut-token-art-e9970fea {
+    width: 56px; height: 56px; object-fit: contain; border-radius: 13px;
+    background: var(--coal);
+}
+.strut-token-tag-e9970fea {
+    max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    font-family: var(--head); font-size: 0.74rem; font-weight: 500; color: #ffffff;
+    text-align: center;
+}
+.strut-token-jump-e9970fea {
+    padding: 8px 22px; border-radius: 999px; background: var(--lime); color: var(--tar);
+    font-size: 0.82rem; font-weight: 600; text-decoration: none; white-space: nowrap;
+    transition: box-shadow 0.15s ease, transform 0.12s ease;
+}
+.strut-token-e9970fea:nth-child(even) .strut-token-jump-e9970fea { background: var(--pink); color: #ffffff; }
+.strut-token-jump-e9970fea:hover { transform: translateY(-1px); box-shadow: var(--glow-lime); }
+.strut-token-e9970fea:nth-child(even) .strut-token-jump-e9970fea:hover { box-shadow: var(--glow-pink); }
+
+
+.strut-reading-e9970fea { padding: 26px 0 6px; }
+.strut-article-e9970fea { max-width: 740px; margin: 0 auto; }
+.strut-article-e9970fea h1 {
+    margin: 0 0 18px; font-family: var(--head); font-size: clamp(1.45rem, 3.8vw, 2.05rem);
+    font-weight: 700; line-height: 1.28; color: #ffffff;
+}
+.strut-article-e9970fea h2 {
+    margin: 42px 0 14px; padding-left: 13px; border-left: 3px solid var(--lime);
+    font-family: var(--head); font-size: 1.16rem; font-weight: 500; line-height: 1.35;
+    color: #ffffff;
+}
+.strut-article-e9970fea p { margin: 0 0 16px; color: var(--smoke); }
+.strut-article-e9970fea a { color: var(--lime); text-decoration: underline; text-underline-offset: 3px; }
+.strut-article-e9970fea a:hover { color: #ffffff; }
+.strut-article-e9970fea ul, .strut-article-e9970fea ol {
+    margin: 0 0 16px; padding-left: 24px; color: var(--smoke);
+}
+.strut-article-e9970fea li { margin-bottom: 9px; }
+.strut-steps-e9970fea { list-style: none; counter-reset: strut-step; padding-left: 0; }
+.strut-steps-e9970fea li {
+    position: relative; counter-increment: strut-step; margin-bottom: 13px;
+    padding-left: 42px;
+}
+.strut-steps-e9970fea li::before {
+    content: counter(strut-step); position: absolute; left: 0; top: 0.1em; width: 27px;
+    height: 27px; display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(212, 255, 63, 0.55); border-radius: 9px;
+    font-family: var(--head); font-size: 0.74rem; color: var(--lime);
+}
+.strut-tier-table-e9970fea {
+    width: 100%; margin: 0 0 16px; border: 1px solid var(--seam); border-radius: 14px;
+    border-collapse: separate; border-spacing: 0; overflow: hidden;
+    background: rgba(255, 255, 255, 0.03); font-size: 0.9rem;
+}
+.strut-tier-table-e9970fea th {
+    padding: 10px 13px; text-align: left; font-family: var(--head); font-size: 0.62rem;
+    font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--lime);
+    background: rgba(212, 255, 63, 0.06); border-bottom: 1px solid var(--seam);
+}
+.strut-tier-table-e9970fea td {
+    padding: 10px 13px; vertical-align: top; color: var(--smoke);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.strut-tier-table-e9970fea tbody tr:last-child td { border-bottom: 0; }
+.strut-tier-table-e9970fea td:first-child { color: #ffffff; font-weight: 600; }
+.strut-note-e9970fea {
+    margin: 0 0 16px; padding: 14px 17px; border: 1px dashed rgba(212, 255, 63, 0.45);
+    border-radius: 14px; background: rgba(212, 255, 63, 0.05);
+}
+.strut-note-e9970fea p { margin: 0; }
+.strut-terms-e9970fea {
+    display: grid; grid-template-columns: minmax(110px, auto) 1fr; margin: 0 0 16px;
+    border: 1px solid var(--seam); border-radius: 14px; overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+}
+.strut-terms-e9970fea dt {
+    padding: 11px 15px; border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-family: var(--head); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em;
+    color: var(--lime);
+}
+.strut-terms-e9970fea dd {
+    margin: 0; padding: 11px 15px; border-top: 1px solid rgba(255, 255, 255, 0.05);
+    font-size: 0.92rem; color: var(--smoke);
+}
+.strut-terms-e9970fea dt:first-of-type, .strut-terms-e9970fea dd:first-of-type { border-top: 0; }
+.strut-quote-e9970fea {
+    margin: 0 0 16px; padding: 15px 19px; border-left: 3px solid var(--pink);
+    border-radius: 0 14px 14px 0; background: rgba(255, 79, 163, 0.07); color: #ffffff;
+    font-style: italic;
+}
+.strut-check-e9970fea, .strut-slips-e9970fea { list-style: none; padding-left: 0; }
+.strut-check-e9970fea li, .strut-slips-e9970fea li {
+    position: relative; padding-left: 26px; margin-bottom: 10px;
+}
+.strut-check-e9970fea li::before {
+    content: "\00BB"; position: absolute; left: 2px; top: -0.05em; color: var(--lime);
+    font-weight: 700; font-size: 1.1em;
+}
+.strut-slips-e9970fea li::before {
+    content: "\2715"; position: absolute; left: 1px; top: 0.08em; color: var(--pink);
+    font-weight: 700; font-size: 0.9em;
+}
+.strut-faq-e9970fea {
+    margin-bottom: 16px; border: 1px solid var(--seam); border-radius: 16px;
+    padding: 6px 18px 12px; background: rgba(255, 255, 255, 0.02);
+}
+.strut-faq-q-e9970fea {
+    margin: 16px 0 8px; padding-top: 14px; border-top: 1px solid rgba(255, 255, 255, 0.06);
+    font-family: var(--head); font-size: 0.92rem; font-weight: 500; line-height: 1.4;
+    color: var(--pink);
+}
+.strut-faq-e9970fea .strut-faq-q-e9970fea:first-of-type { border-top: 0; padding-top: 8px; }
+.strut-faq-e9970fea p { margin-bottom: 8px; }
+
+
+.strut-tail-e9970fea {
+    margin-top: 42px; padding: 30px 20px 38px; border-top: 1px solid var(--seam);
+    background: var(--coal); text-align: center;
+}
+.strut-tail-note-e9970fea {
+    max-width: 740px; margin: 0 auto 10px; font-size: 0.9rem; color: var(--paper);
+}
+.strut-tail-fine-e9970fea { max-width: 740px; margin: 0 auto; font-size: 0.8rem; color: var(--smoke); }
+.strut-adult-e9970fea {
+    display: inline-block; margin-right: 7px; padding: 1px 9px;
+    border: 1px solid var(--pink); border-radius: 8px; color: var(--pink);
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.04em; vertical-align: 1px;
+}
+
+
+@media (max-width: 700px) {
+    .strut-city-e9970fea { padding: 18px 14px 24px; }
+    .strut-marquee-e9970fea { padding-top: 32px; }
+    .strut-tier-table-e9970fea { display: block; overflow-x: auto; font-size: 0.84rem; }
+}
+@media (max-width: 420px) {
+    .strut-gears-e9970fea { grid-template-columns: repeat(2, 1fr); }
+    .strut-cab-e9970fea { padding: 12px 12px 16px; }
+    .strut-meter-read-e9970fea { font-size: 0.82rem; }
+    .strut-token-e9970fea { min-width: 164px; }
+    .strut-terms-e9970fea { grid-template-columns: 1fr; }
+    .strut-terms-e9970fea dt { padding-bottom: 2px; }
+    .strut-terms-e9970fea dd { border-top: 0; padding-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .strut-ticker-belt-e9970fea, .strut-lane-next-e9970fea, .strut-hen-hopping-e9970fea { animation: none; }
+    html { scroll-behavior: auto; }
+}
